@@ -1,0 +1,18 @@
+ if (updatedGameBoard[shotInputX][shotInputY] == destroyersSymbol || updatedGameBoard[shotInputX][shotInputY] == cruiserSymbol || updatedGameBoard[shotInputX][shotInputY] == defaultShipSymbol || updatedGameBoard[shotInputX][shotInputY] == aircraftShipSymbol) {
+                        System.out.println("Hit!");
+                        numMissilesFired++;
+                        numMissilesHit++;
+                        totalShipNumber--;
+                        difficulty--;
+                        trackHitMiss.add("Hit | (" + shotInputX + ", " + shotInputY + ")");
+                        updatedGameBoard[shotInputX][shotInputY] = 'X';
+                        gameBoardDummy[shotInputX][shotInputY] = 'X';
+                    } else if (updatedGameBoard[shotInputX][shotInputY] == waterSymbol) {
+                        System.out.println("Miss!");
+                        numMissilesFired++;
+                        numMissilesMiss++;
+                        difficulty--;
+                        trackHitMiss.add("Miss| (" + shotInputX + ", " + shotInputY + ")");
+                        updatedGameBoard[shotInputX][shotInputY] = 'O';
+                        gameBoardDummy[shotInputX][shotInputY] = 'O';
+                    }
