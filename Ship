@@ -1,0 +1,24 @@
+//Base class that contains everything all the ships need
+
+public class Ship {
+    private static char shipSymbol;
+    private static int shipSize;
+
+
+    public static void setSymbol(char shipSymbolV){
+        shipSymbol = shipSymbolV;
+    }
+
+    public char getSymbol(){
+        return shipSymbol;
+    }
+
+    public static void setShipSize(int shipSizeV){
+        shipSize = shipSizeV;
+    }
+
+    public int getShipSize(){
+        return shipSize;
+    }
+
+}
